@@ -36,12 +36,8 @@ class Solution {
         Collections.sort(list1);
         Collections.sort(list2);
 
-        for (int i = 0; i < list1.size(); i++) {
-            if (!list1.get(i).equals(list2.get(i))){
-                return false;
-            }
-        }
+        
 
-        return true;
+        return list1.equals(list2);
     }
 }
