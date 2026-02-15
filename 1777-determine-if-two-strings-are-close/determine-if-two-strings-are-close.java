@@ -36,8 +36,6 @@ class Solution {
         Collections.sort(list1);
         Collections.sort(list2);
 
-        
-
         return list1.equals(list2);
     }
 }
