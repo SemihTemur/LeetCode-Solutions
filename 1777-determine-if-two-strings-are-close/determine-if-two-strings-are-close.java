@@ -17,10 +17,10 @@ class Solution {
                 return false;
         }
 
-         for (char key : word2Map.keySet()) {
-            if (!word1Map.containsKey(key))
-                return false;
-        }
+        //  for (char key : word2Map.keySet()) {
+        //     if (!word1Map.containsKey(key))
+        //         return false;
+        // }
 
         List<Integer> list1 = new ArrayList<>();
         List<Integer> list2 = new ArrayList<>();
