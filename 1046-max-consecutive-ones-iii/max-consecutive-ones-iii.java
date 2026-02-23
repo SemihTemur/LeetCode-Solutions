@@ -9,7 +9,7 @@ class Solution {
             for(j=i;j<nums.length;j++){
                 if(count>=k && nums[j]==0)
                     break;
-                if(nums[j]==0)
+                else if(nums[j]==0)
                     count++;
                 value++;
             }
