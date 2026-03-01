@@ -7,9 +7,9 @@ class Solution {
         int i = 0;
 
         for (i = 0; i < arr.length - 1; i++) {
-            if (Math.abs(arr[i] - arr[i + 1]) == minDifference)
+            if (arr[i + 1] - arr[i] == minDifference)
                 minimumAbsDifference.add(new ArrayList<>(Arrays.asList(arr[i], arr[i + 1])));
-            else if (Math.abs(arr[i] - arr[i + 1]) < minDifference) {
+            else if (arr[i + 1] - arr[i] < minDifference) {
                 minDifference = arr[i+1] - arr[i];
                 minimumAbsDifference.clear();
                 minimumAbsDifference.add(new ArrayList<>(Arrays.asList(arr[i], arr[i + 1])));
