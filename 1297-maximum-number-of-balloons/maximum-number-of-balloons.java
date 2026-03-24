@@ -9,25 +9,12 @@ class Solution {
                 map.merge(c, 1, Integer::sum);
         }
 
-        for (char c : value.toCharArray()) {
-            if (map.containsKey(c) && c == 'b')
-                count = Math.min(count, map.get(c));
-
-            else if(map.containsKey(c) && c == 'l')
-                count = Math.min(count,map.get(c) / 2);
-            
-            else if(map.containsKey(c) && c == 'a')
-                count = Math.min(count,map.get(c));
-
-            else if(map.containsKey(c) && c == 'n')
-                count = Math.min(count,map.get(c));
-            
-            else if(map.containsKey(c) && c == 'o')
-                count = Math.min(count,map.get(c) / 2);
-            else
-                return 0;
-        }
-
+        count = Math.min(count, map.getOrDefault('b', 0));
+        count = Math.min(count, map.getOrDefault('a', 0));
+        count = Math.min(count, map.getOrDefault('l', 0) / 2);
+        count = Math.min(count, map.getOrDefault('o', 0) / 2);
+        count = Math.min(count, map.getOrDefault('n', 0));
+        
         return count;
     }
 }
